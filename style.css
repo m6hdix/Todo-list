@@ -1,0 +1,140 @@
+@import url("./asset/style/fonts-todo.css");
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    list-style: none;
+}
+
+:root {
+    --primaryColor: #6d28d9;
+    --secondryColor: #ede9fe;
+    --mainWhite: #fff;
+    --mainBlack: #222;
+    --mainGrey: #7c7c7c;
+    --mainSpacing: 0.1rem;
+    --mainTransition: all 0.3 linear;
+    --mainRed: #db2777;
+    --bodyColor: #f6f6f6;
+}
+
+body {
+    font-family: "iransans";
+    color: var(--mainBlack);
+    background-color: var(--bodyColor);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.todo-container {
+    padding-top: 2rem;
+    width: 25rem;
+}
+
+form {
+    width: 25rem;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 8px;
+}
+
+form input {
+    flex: 1;
+}
+
+form button,
+form input {
+    border: none;
+    outline: none;
+    background-color: var(--mainWhite);
+    font-size: 1rem;
+    padding: 0.5rem;
+    border-radius: 8px;
+}
+
+form button {
+    color: var(--primaryColor);
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+form button:hover {
+    background-color: var(--primaryColor);
+    color: var(--mainWhite);
+}
+
+.todo-item {
+    display: flex;
+    align-items: center;
+    transition: all 0.5s ease;
+    flex-direction: row;
+    background-color: var(--secondryColor);
+    color: var(--primaryColor);
+    height: 2rem;
+    padding: 0.5rem;
+    border-radius: 8px;
+}
+
+.todo-item li {
+    flex: 1;
+}
+
+.todo-item span {
+    margin-left: 1rem;
+    cursor: pointer;
+}
+
+.fa-check-square {
+    color: green;
+}
+
+.fa-trash-alt {
+    color: var(--mainRed);
+}
+
+.select {
+    margin-left: 1rem;
+    border-radius: 8px;
+    background-color: var(--mainWhite);
+}
+
+.select select {
+    background-color: var(--secondryColor);
+    border: none;
+    height: 2rem;
+    padding: 0.5rem;
+    color: var(--primaryColor);
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.select ::after {
+    content: "/25BC";
+}
+
+.Line-breaker {
+    text-decoration: line-through;
+    opacity: 0.5;
+}
